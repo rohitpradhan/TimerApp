@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum Constants {
+    enum Strings {
+        static let start = "Start"
+        static let stop = "Stop"
+        static let pause = "Pause"
+        static let notificationTitle = "Timer Alert"
+        static let notificationBody = "One minute timer is Ended"
+    }
+}

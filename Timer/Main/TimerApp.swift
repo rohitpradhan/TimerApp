@@ -9,9 +9,20 @@ import SwiftUI
 
 @main
 struct TimerApp: App {
+    
+    init() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { granted, error in
+            if granted {
+                print("Notification permission granted")
+            } else if let error = error {
+                print("Error requesting notification permission: \(error.localizedDescription)")
+            }
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CountdownView(viewModel: CountdownViewModel())
         }
     }
 }

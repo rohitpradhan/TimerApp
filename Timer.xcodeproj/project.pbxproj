@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		C680336E2B22F97500BC1AAA /* TimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680336D2B22F97500BC1AAA /* TimerApp.swift */; };
-		C68033702B22F97500BC1AAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680336F2B22F97500BC1AAA /* ContentView.swift */; };
+		C68033702B22F97500BC1AAA /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680336F2B22F97500BC1AAA /* CountdownView.swift */; };
 		C68033722B22F97600BC1AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68033712B22F97600BC1AAA /* Assets.xcassets */; };
 		C68033752B22F97600BC1AAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68033742B22F97600BC1AAA /* Preview Assets.xcassets */; };
+		C680337F2B22FB4600BC1AAA /* CountdownViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680337E2B22FB4600BC1AAA /* CountdownViewModel.swift */; };
+		C68033822B2334D900BC1AAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68033812B2334D900BC1AAA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C680336A2B22F97500BC1AAA /* Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C680336D2B22F97500BC1AAA /* TimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerApp.swift; sourceTree = "<group>"; };
-		C680336F2B22F97500BC1AAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C680336F2B22F97500BC1AAA /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
 		C68033712B22F97600BC1AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C68033742B22F97600BC1AAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C680337E2B22FB4600BC1AAA /* CountdownViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewModel.swift; sourceTree = "<group>"; };
+		C68033812B2334D900BC1AAA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		C680336C2B22F97500BC1AAA /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				C680336D2B22F97500BC1AAA /* TimerApp.swift */,
-				C680336F2B22F97500BC1AAA /* ContentView.swift */,
+				C68033802B2334C600BC1AAA /* Utility */,
+				C680337D2B22FACE00BC1AAA /* Main */,
+				C680337B2B22FAA400BC1AAA /* UI */,
 				C68033712B22F97600BC1AAA /* Assets.xcassets */,
 				C68033732B22F97600BC1AAA /* Preview Content */,
 			);
@@ -65,6 +70,39 @@
 				C68033742B22F97600BC1AAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C680337B2B22FAA400BC1AAA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C680337C2B22FAB700BC1AAA /* Countdown */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C680337C2B22FAB700BC1AAA /* Countdown */ = {
+			isa = PBXGroup;
+			children = (
+				C680336F2B22F97500BC1AAA /* CountdownView.swift */,
+				C680337E2B22FB4600BC1AAA /* CountdownViewModel.swift */,
+			);
+			path = Countdown;
+			sourceTree = "<group>";
+		};
+		C680337D2B22FACE00BC1AAA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C680336D2B22F97500BC1AAA /* TimerApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C68033802B2334C600BC1AAA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C68033812B2334D900BC1AAA /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68033702B22F97500BC1AAA /* ContentView.swift in Sources */,
+				C68033702B22F97500BC1AAA /* CountdownView.swift in Sources */,
+				C680337F2B22FB4600BC1AAA /* CountdownViewModel.swift in Sources */,
 				C680336E2B22F97500BC1AAA /* TimerApp.swift in Sources */,
+				C68033822B2334D900BC1AAA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 5KXTG96B3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Timer/Preview Content\"";
+				DEVELOPMENT_TEAM = 5KXTG96B3P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
